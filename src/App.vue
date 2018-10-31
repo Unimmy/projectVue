@@ -11,7 +11,7 @@
     </header>
     <div class="nav-two" :class="{'flexd': fixed}" >
       <div class="center">
-        <img src="./assets/images/logo.png" alt="">
+        <img src="./assets/images/logo.png">
         <div class="nav-a">
           <ul>
             <li>
@@ -59,7 +59,7 @@
     </div>
     <router-view></router-view>
      <footer class="nav-three">
-        <div class="nav-fd" >
+        <div class="nav-fd" v-if="displays">
             <ul >
                 <li>友情链接:</li>
                 <li><a href="#">成都家装公司</a></li>
@@ -134,7 +134,8 @@ export default {
   data(){
     return {
       fixed:false,
-      ishide:false
+      ishide:false,
+      displays:true
     }
   },
    mounted () { 
@@ -158,7 +159,6 @@ export default {
   width:100%;
   position: fixed;
   top:0px;
-  
   z-index:9999
 }
 body{
@@ -293,7 +293,7 @@ footer a,footer ul,footer li{
   position: fixed;
   top:102px;
   left:0px;
-  background: rgba(222,222,222,.5);
+  background: rgba(222,222,222,.7);
   overflow: hidden;
   transition: all 0.5s linear;
 }
@@ -481,5 +481,4 @@ background: #262626;
     line-height: 30px;
     color: #9b9b9b;
 }
-
 </style>

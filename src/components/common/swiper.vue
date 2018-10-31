@@ -11,11 +11,13 @@
 <script>
 export default {
     data(){
-        return {}
+        return {
+          
+        }
     },
     methods:{},
     created(){},
-     props:["bannerlist"]
+     props:["bannerlist", 'imgtype']
 }
 </script>
 
