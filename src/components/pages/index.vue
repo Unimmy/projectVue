@@ -542,5 +542,15 @@ export default {
         height:731px;
         background: #e7e1e1;
     }
-    
+    .grid-content{
+         overflow: hidden;
+    }
+    .grid-content img{
+        transition:all 0.5s linear;
+       
+    }
+   .grid-content img:hover{
+       transform:scale(1.05);
+       cursor:pointer;
+   } 
 </style>

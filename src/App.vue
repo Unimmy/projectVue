@@ -15,7 +15,7 @@
         <div class="nav-a">
           <ul>
             <li>
-              <a href="#" class="firsta">网站首页</a>
+              <a href="#" class="firsta" @click="jumptoindex">网站首页</a>
             </li>
             <li>
               <a href="#"  class="senda">整装产品</a>
@@ -28,7 +28,7 @@
               </div>
             </li>
             <li>
-              <a href="#" class="senda">装修案例</a>
+              <a href="#" class="senda" @click="jumptocases">装修案例</a>
                 <div class="fixeddiv" :class="{'fixeddivs':fixed}">
                     <div class="fixedcon">
                         <a href="#"><img src="./assets/images/vr.jpg" alt=""><p class="pstyle">3D案列</p></a>
@@ -139,9 +139,12 @@ export default {
     }
   },
    mounted () { 
-     window.addEventListener('scroll', this.handleScroll) },
-      methods: { 
-        handleScroll () { 
+     window.addEventListener('scroll', this.handleScroll)},
+     methods: { 
+         jumptoindex(){
+             this.$router.push({path:"index"})
+         },
+      handleScroll () { 
           var height=window.scrollY;
           if(height>77){
             this.fixed=true;
@@ -149,7 +152,10 @@ export default {
           if(height<=77){
             this.fixed=false
           }
-          } 
+          } ,
+            jumptocases(e){
+            e.preventDefault();
+            this.$router.push({path:'cases'})}
         },
 }
 </script>
