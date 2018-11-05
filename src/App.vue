@@ -142,7 +142,7 @@ export default {
      window.addEventListener('scroll', this.handleScroll)},
      methods: { 
          jumptoindex(){
-             this.$router.push({path:"index"})
+             this.$router.replace({path:"/index"})
          },
       handleScroll () { 
           var height=window.scrollY;
@@ -155,8 +155,14 @@ export default {
           } ,
             jumptocases(e){
             e.preventDefault();
-            this.$router.push({path:'cases'})}
+            this.$router.replace({path:'/cases'})}
         },
+        watch: {
+        '$route' (to, from) {
+        this.$router.go(0);
+    }
+}
+        
 }
 </script>
 

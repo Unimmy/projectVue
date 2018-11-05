@@ -209,7 +209,6 @@ export default {
             var url = "http://127.0.0.1:4001/banner/banner"
             this.$http.get(url).then(res=>{
                 this.bannerlist = res.data.data;
-                 console.log(this.bannerlist)
             })
         },
         getNewsIndex(){

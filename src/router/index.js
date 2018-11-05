@@ -10,6 +10,7 @@ export default new Router({
     {path: '/',redirect:'/index'},
     {path: '/index',component:Index},
     {path:'/cases',component:Cases},
-    {path:'/detail',name:'detail',component:Detail}
+    {path:'/detail/:did',name:'detail',component:Detail},
+    {path:'**',component:Index}
   ]
 })

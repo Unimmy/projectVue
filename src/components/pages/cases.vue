@@ -2,7 +2,7 @@
 <div class="container-fulid">
         <div class="container-img"></div>
         <div class="con-is">
-            <input type="text" class="con-input" placeholder="请输入作品名称" v-model="searchkey">
+            <input type="text" class="con-input" placeholder="请输入作品名称" v-model="searchkey" @keyup.enter="searchinput">
             <button class="con-search" @click="searchinput"></button>
         </div>
         <div class="container nav-top">
@@ -34,7 +34,7 @@
                 <div class="demos-detail">
                     <span>{{item.title}}</span>
                     <p>{{item.style}} |{{item.type}} | {{item.squer}}㎡ </p>
-                    <img :src="item.design_img" style="width:40px;height:40px; position:absolute;top:310px;right:10px"/>
+                    <img v-if="item.design_img" :src="item.design_img" style="width:40px;height:40px; position:absolute;top:310px;right:10px"/>
                 </div>
                 <div class=demos-foot>
                     <span>设计师:{{item.design}}</span>
@@ -77,8 +77,6 @@ export default {
             var url = `http://127.0.0.1:4001/cases/cases?title=${this.searchkey}&pno=${this.pno}`
             this.$http.get(url).then(res=>{
                  this.detalist=res.data
-                //  console.log(res)
-                 console.log(this.detalist)
             })
         },
         check(index){
@@ -126,7 +124,6 @@ export default {
             var url = `http://127.0.0.1:4001/cases/cases?title=${this.searchkey}&pno=${this.pno}&keywords=${this.keywords}&keywords1=${this.keywords1}&keywords2=${this.keywords2}`
             this.$http.get(url).then(res=>{
                     this.detalist=res.data
-                    console.log(this.detalist)
             })
           },  
           //分页右移
@@ -145,7 +142,7 @@ export default {
         })
     },
     jumptodetail(did){
-        this.$router.push({name:'detail',params:{did:did}})
+        this.$router.replace({name:'detail',params:{did:did}})
     }            
 },
 created(){ 
