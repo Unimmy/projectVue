@@ -32,7 +32,7 @@
                 <div class="fixeddiv" :class="{'fixeddivs':fixed}">
                     <div class="fixedcon">
                         <a href="#"><img src="./assets/images/vr.jpg" alt=""><p class="pstyle">3D案列</p></a>
-                        <a href="#"><img src="./assets/images/jd.jpg" alt=""><p class="pstyle">家装案列</p></a>
+                        <a href="#" @click="jumptocases"><img src="./assets/images/jd.jpg" alt=""><p class="pstyle">家装案列</p></a>
                         <a href="#"><img src="./assets/images/zp.jpg" alt=""><p class="pstyle">精选作品</p></a>
                     </div>
               </div>

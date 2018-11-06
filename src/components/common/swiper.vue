@@ -17,7 +17,7 @@ export default {
     },
     methods:{},
     created(){},
-     props:["bannerlist", 'imgtype']
+     props:["bannerlist"]
 }
 </script>
 

@@ -25,7 +25,7 @@
        <div class="smcon">
             <div class="title01">
                     <h1>装修案例·家原来可以如此</h1>
-                    <h3>Decoration case, the original home can be so<a href="#">了解更多&gt;</a></h3>
+                    <h3>Decoration case, the original home can be so<router-link to="/cases">了解更多&gt;</router-link></h3>
                 </div>
             </div>
         <div class="smcon1"> 
@@ -34,15 +34,21 @@
                     <img src="http://www.bzzss.com/scltzs/simplebootx/Public/images/3.jpg">
                 </div>
                 <div  class="img2">
+                     <router-link to="/detail/51">
                     <img src="http://img.ltjia.cn/20180223/5a8f7a2f5115a.jpg">
+                      </router-link>
                     <span>美式风格</span>
                 </div>
                 <div  class="img3">
-                    <img src="http://img.ltjia.cn/20180407/5ac8639bc3b97.jpg">
+                    <router-link to="/detail/7">
+                        <img src="http://img.ltjia.cn/20180407/5ac8639bc3b97.jpg">
+                     </router-link>
                     <span>田园风格</span>
                 </div>
                 <div  class="img4">
+                    <router-link to="/detail/51">
                     <img src="http://img.ltjia.cn/20180224/5a90cc040187c.jpg">
+                    </router-link>
                     <span>美式风格</span>
                 </div>
             </div>

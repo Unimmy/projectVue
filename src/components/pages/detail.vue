@@ -184,7 +184,6 @@ export default {
         //从服务器获取body部分内容
         getbodydata(){
             var did=this.$route.params.did
-            console.log(did)
             var url=`http://127.0.0.1:4001/details/details?did=${did}`
             this.$http.get(url).then(res=>{
             this.bodylist = res.data.data[0]
@@ -259,7 +258,7 @@ export default {
     position: relative;
 }
 .det01sp{
-    display:inline-block;
+    /* display:inline-block; */
     width: 122px;
     height: 36px;
     border: 1px solid #d1d1d1;
@@ -269,7 +268,7 @@ export default {
     margin-right: 15px;
     margin-top: 70px;
     line-height: 36px;
-    float: right;
+    float:right;
     cursor: pointer;
 }
 .det01sp1{
