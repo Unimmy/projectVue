@@ -28,12 +28,12 @@
               </div>
             </li>
             <li>
-              <a href="#" class="senda" @click="jumptocases">装修案例</a>
+              <router-link to="/cases" class="senda">装修案例</router-link>
                 <div class="fixeddiv" :class="{'fixeddivs':fixed}">
                     <div class="fixedcon">
-                        <a href="#"><img src="./assets/images/vr.jpg" alt=""><p class="pstyle">3D案列</p></a>
-                        <a href="#" @click="jumptocases"><img src="./assets/images/jd.jpg" alt=""><p class="pstyle">家装案列</p></a>
-                        <a href="#"><img src="./assets/images/zp.jpg" alt=""><p class="pstyle">精选作品</p></a>
+                        <router-link to="#" ><img src="./assets/images/vr.jpg" alt=""><p class="pstyle">3D案列</p></router-link>
+                        <router-link to="/cases"><img src="./assets/images/jd.jpg" alt=""><p class="pstyle">家装案列</p></router-link>
+                        <router-link to="#"><img src="./assets/images/zp.jpg" alt=""><p class="pstyle">精选作品</p></router-link>
                     </div>
               </div>
             </li>
@@ -113,9 +113,9 @@
                     <div class="zhong5">
                             <ul style="border:none;"> 
                                 <div class="wx">
-                                    <img src="http://oncrbykag.bkt.clouddn.com/20180307/5a9f9f12bc471.jpg">装修报价</div> 
+                                    <img src="http://www.bzzss.com/data/upload/20180615/5b23262439a5b.jpg">专车接送</div> 
                                 <div class="wx">
-                                    <img src="http://oncrbykag.bkt.clouddn.com/20170507/590ecdd0989b8.jpg">微信公众号</div>
+                                    <img src="http://www.bzzss.com/data/upload/20180615/5b2326193ad86.jpg">微信公众号</div>
                                 </ul>
                     </div>
                 </div>      
@@ -152,10 +152,10 @@ export default {
           if(height<=77){
             this.fixed=false
           }
-          } ,
-            jumptocases(e){
-            e.preventDefault();
-            this.$router.replace({path:'/cases'})}
+          } //,
+            // jumptocases(e){
+            // e.preventDefault();
+            // this.$router.replace({path:'/cases'})}
         },
         watch: {
         '$route' (to, from) {

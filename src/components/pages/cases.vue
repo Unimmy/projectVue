@@ -74,7 +74,7 @@ export default {
     },
     methods:{
         searchinput(){
-            var url = `http://127.0.0.1:4001/cases/cases?title=${this.searchkey}&pno=${this.pno}`
+            var url = `http://148.70.49.89:4001/cases/cases?title=${this.searchkey}&pno=${this.pno}`
             this.$http.get(url).then(res=>{
                  this.detalist=res.data
             })
@@ -82,7 +82,7 @@ export default {
         check(index){
             this.current=index;
             this.keywords=this.style[index] 
-            var url = `http://127.0.0.1:4001/cases/cases?pno=${this.pno}&keywords=${this.keywords}`
+            var url = `http://148.70.49.89:4001/cases/cases?pno=${this.pno}&keywords=${this.keywords}`
             this.$http.get(url).then(res=>{
                     this.detalist=res.data
                    
@@ -91,7 +91,7 @@ export default {
          checks(index){
             this.current1=index;
              this.keywords1=this.squer[index]
-               var url = `http://127.0.0.1:4001/cases/cases?pno=${this.pno}&keywords=${this.keywords}&keywords1=${this.keywords1}`
+               var url = `http://148.70.49.89:4001/cases/cases?pno=${this.pno}&keywords=${this.keywords}&keywords1=${this.keywords1}`
             this.$http.get(url).then(res=>{
                     this.detalist=res.data
             })
@@ -99,7 +99,7 @@ export default {
          checka(index){
             this.current2=index;
             this.keywords2=this.type[index]
-            var url = `http://127.0.0.1:4001/cases/cases?pno=${this.pno}&keywords=${this.keywords}&keywords1=${this.keywords1}&keywords2=${this.keywords2}`
+            var url = `http://148.70.49.89:4001/cases/cases?pno=${this.pno}&keywords=${this.keywords}&keywords1=${this.keywords1}&keywords2=${this.keywords2}`
             this.$http.get(url).then(res=>{
                     this.detalist=res.data
             })
@@ -107,7 +107,7 @@ export default {
           checkm(index){
             this.current3=index;
             this.pno=this.current3+1
-            var url = `http://127.0.0.1:4001/cases/cases?pno=${this.pno}&keywords=${this.keywords}&keywords1=${this.keywords1}&title=${this.searchkey}&keywords2=${this.keywords2}`
+            var url = `http://148.70.49.89:4001/cases/cases?pno=${this.pno}&keywords=${this.keywords}&keywords1=${this.keywords1}&title=${this.searchkey}&keywords2=${this.keywords2}`
             this.$http.get(url).then(res=>{
             this.detalist=res.data
             })
@@ -121,7 +121,7 @@ export default {
                 this.pno=0
               }
                
-            var url = `http://127.0.0.1:4001/cases/cases?title=${this.searchkey}&pno=${this.pno}&keywords=${this.keywords}&keywords1=${this.keywords1}&keywords2=${this.keywords2}`
+            var url = `http://148.70.49.89:4001/cases/cases?title=${this.searchkey}&pno=${this.pno}&keywords=${this.keywords}&keywords1=${this.keywords1}&keywords2=${this.keywords2}`
             this.$http.get(url).then(res=>{
                     this.detalist=res.data
             })
@@ -136,7 +136,7 @@ export default {
                     this.pno=num-1
                     } 
                   
-            var url = `http://127.0.0.1:4001/cases/cases?title=${this.searchkey}&pno=${this.pno}&keywords=${this.keywords}&keywords1=${this.keywords1}&keywords2=${this.keywords2}`
+            var url = `http://148.70.49.89:4001/cases/cases?title=${this.searchkey}&pno=${this.pno}&keywords=${this.keywords}&keywords1=${this.keywords1}&keywords2=${this.keywords2}`
             this.$http.get(url).then(res=>{
             this.detalist=res.data 
         })

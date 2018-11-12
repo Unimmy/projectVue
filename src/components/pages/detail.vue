@@ -175,7 +175,7 @@ export default {
         // 从服务器获取头部的信息
         getdata(){
             var did=this.$route.params.did
-            var url=`http://127.0.0.1:4001/cases/productsdetail?did=${did}`
+            var url=`http://148.70.49.89:4001/cases/productsdetail?did=${did}`
             this.$http.get(url).then(res=>{
                 this.headlist = res.data.data[0]
             }
@@ -184,7 +184,7 @@ export default {
         //从服务器获取body部分内容
         getbodydata(){
             var did=this.$route.params.did
-            var url=`http://127.0.0.1:4001/details/details?did=${did}`
+            var url=`http://148.70.49.89:4001/details/details?did=${did}`
             this.$http.get(url).then(res=>{
             this.bodylist = res.data.data[0]
             }
@@ -192,21 +192,21 @@ export default {
         },
         // 获取新闻列表
         getnews(){
-            var url = "http://127.0.0.1:4001/indexnews/indexnews"
+            var url = "http://148.70.49.89:4001/indexnews/indexnews"
                 this.$http.get(url).then(res=>{
                 this.newslist = res.data.data.slice(0,4);
              })
         },
         //获取设计师
           getdesginers(){
-            var url = "  http://127.0.0.1:4001/details/desginer"
+            var url = "  http://148.70.49.89:4001/details/desginer"
                 this.$http.get(url).then(res=>{
                 this.desginers = res.data.data.slice(0,4);
              })
         },
         //获取四张跳转图
         getmore(){
-              var url ="http://127.0.0.1:4001/cases/imgs"
+              var url ="http://148.70.49.89:4001/cases/imgs"
                 this.$http.get(url).then(res=>{
                 this.jumplists = res.data.data
              })
